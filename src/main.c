@@ -10,12 +10,13 @@ int main() {
   char command[MAX_INPUT_SIZE];
 
   fgets(command, sizeof(command), stdin);
+  printf("------------------------------\n");
   printf("%s", command);
 
   int spaces;
-
-  for (int i = 0; i < strlen(command); i++) {
-    printf("%c", command[i]);
+  int cmd_len = strlen(command);
+  for (int i = 0; i < cmd_len; i++) {
+    printf("%c\n", command[i]);
   }
 
   return 0;
