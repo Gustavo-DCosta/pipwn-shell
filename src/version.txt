@@ -1,0 +1,5 @@
+Welcome to Pipwn-shell
+
+Pipwn-shell is a CLI tool to connect your phone to your raspberry, it has multiple commands
+
+Pipwn-shell v.00.1
