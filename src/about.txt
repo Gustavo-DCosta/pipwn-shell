@@ -1,0 +1,61 @@
+PiPwn 🐧💀 – Custom Hacker Shell for Raspberry Pi
+Lightweight, sexy, and deadly. A custom shell written in C, made to run on a Raspberry Pi (Zero W or any flavor), controlled from your phone (eventually 😉).
+
+⚙️ About
+PiPwn is a minimalist shell designed to:
+
+Act as a portable hacking terminal
+Support custom commands like help, version, and about
+Be controlled via Termux or a future Kotlin-based mobile UI
+Be modular, clean, and FAST (written in C)
+Teach you system-level magic along the way
+Built for the Raspberry Pi — but honestly, it'll run on anything with a terminal and a soul.
+
+🧠 Features (v1 MVP)
+ CLI interface with custom prompt (pipwn>)
+ Custom command handling (help, version, etc.)
+ ANSI color-coded output
+ Remote communication (SSH/TCP client)
+ Kotlin mobile app (later)
+ Rewritten in Zig (future version)
+📁 Project Structure
+pipwn/ ├── src/ │ ├── main.c # Entry point │ ├── shell.c # Shell logic (loop, input, exec) │ ├── commands.c # Custom commands │ ├── include/ │ ├── shell.h │ ├── commands.h │ ├── bin/ # Compiled binaries ├── docs/ # Project documentation ├── Makefile └── README.md
+
+🛠️ Building
+Requirements:
+GCC
+Make
+A Raspberry Pi or any Linux machine
+5 braincells and a grudge against Bash
+Compile:
+make
+
+
+## RUN CODE 
+./bin/pipwn
+
+
+✨ Custom Commands
+Command	Description
+help	Shows custom help menu
+version	Displays PiPwn version
+clear	Clears the terminal screen
+exit	Exits the shell
+(more soon)	You get the idea 👀
+
+🚀 Roadmap
+ Milestone 1: Core shell loop & basic commands
+
+ Milestone 2: SSH/TCP remote control
+
+ Milestone 3: Mobile app (Kotlin)
+
+ Milestone 4: Zig rewrite for performance + safety
+
+📜 License
+MIT. 
+
+🧠 Fun Fact
+Every time you get a segfault, a pointer angel loses its wings.
+
+Built With Rage, Caffeine, and #include <pain.h>

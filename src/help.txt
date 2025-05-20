@@ -1,0 +1,10 @@
+Usage: pipwn-shell [options]
+
+Commands:
+  version?       Show current shell version
+  exit           Leave the shell
+  ls             List directory contents
+  whoami         Show current user
+
+Type 'help [command]' for more info on a command.
+
