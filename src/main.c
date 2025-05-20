@@ -46,6 +46,33 @@ int main(int argc, char *argv[]) {
             printf(RESET);
             fclose(Vptr);
         }
+
+        if (strcmp(command, "about?") == 0) {
+            char exe_path[PATH_MAX];
+            if (realpath(argv[0], exe_path) == NULL) {
+                perror(RED "Error getting executable path" RESET);
+                continue;
+            }
+
+            char *exe_dir = dirname(exe_path);
+            char version_path[PATH_MAX];
+            snprintf(version_path, sizeof(version_path), "%s/../src/about.txt", exe_dir);
+
+            FILE *Vptr = fopen(version_path, "r");
+            if (!Vptr) {
+                perror(RED "Couldn't open version.txt" RESET);
+                continue;
+            }
+
+            char ch;
+            printf(GREEN);
+            while ((ch = fgetc(Vptr)) != EOF) {
+                putchar(ch);
+            }
+            printf(RESET);
+            fclose(Vptr);
+        }
+        
     }
 
     return 0;
